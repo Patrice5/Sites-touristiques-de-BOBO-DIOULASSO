@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forêt Classée du Kou</title>
+    <link rel="stylesheet" href="site_style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Lato:wght@400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav>
+        <a href="index.html">ACCUEIL</a>
+        <a href="patrimoine.html">PATRIMOINE</a>
+        <a href="reserver.html">RÉSERVATION D'HÔTEL</a>
+        <a href="galerie.html">GALERIE</a>
+    </nav>
+    <div class="animated-images">
+        <div class="image-wrapper">
+            <h1>Forêt Classée du Kou</h1>
+            <img src="k4.jpeg" alt="Forêt Classée du Kou">
+        </div>
+    </div>
+    <div class="container">
+        <h1>Description de la Forêt Classée du Kou</h1>
+        <p>La Forêt Classée du Kou est un espace naturel protégé situé près de Bobo-Dioulasso, au Burkina Faso. Réputée pour sa biodiversité riche et ses paysages pittoresques, cette forêt est un lieu privilégié pour les amoureux de la nature et les randonneurs. Elle abrite de nombreuses espèces végétales et animales et offre un refuge à une faune variée.</p>
+    </div>
+    <div class="container">
+        <h1>Histoire de la Forêt Classée du Kou</h1>
+        <p>La Forêt Classée du Kou a été désignée comme zone protégée pour préserver sa biodiversité unique et ses écosystèmes précieux. Voici un aperçu de son histoire :</p>
+        <h2>Origines et Contexte Historique</h2>
+        <p>La forêt a été classée au début du 20ème siècle dans le but de protéger la faune et la flore locales. Elle est un exemple de la volonté de conservation des ressources naturelles du Burkina Faso.</p>
+        <h2>Protection et Conservation</h2>
+        <p>Depuis sa classification, la forêt a fait l'objet de divers efforts de conservation pour préserver ses écosystèmes. Ces efforts incluent la lutte contre la déforestation et la promotion de pratiques durables.</p>
+        <h2>Faune et Flore</h2>
+        <p>La Forêt Classée du Kou abrite une grande variété d'espèces animales et végétales, certaines étant endémiques à la région. C'est un lieu de recherche scientifique et d'observation de la nature.</p>
+        <h2>Aujourd'hui</h2>
+        <p>Actuellement, la forêt est un site touristique populaire pour les visites guidées, la randonnée et l'observation de la faune. Elle continue d'être un symbole de la conservation de la biodiversité au Burkina Faso.</p>
+    </div>
+    <div class="gallery">
+        <h1>Galerie de la Forêt Classée du Kou</h1>
+        <div class="image-grid">
+            <a href="k2.jpeg" data-lightbox="image-1"><img src="k2.jpeg" alt="Forêt Classée du Kou 1"></a>
+            <a href="k3.jpg" data-lightbox="image-2"><img src="k3.jpg" alt="Forêt Classée du Kou 2"></a>
+            <a href="k4.jpeg" data-lightbox="image-3"><img src="k4.jpeg" alt="Forêt Classée du Kou 3"></a>
+            <a href="k5.jpeg" data-lightbox="image-4"><img src="k5.jpeg" alt="Forêt Classée du Kou 4"></a>
+            <a href="k.jpeg" data-lightbox="image-5"><img src="k.jpeg" alt="Forêt Classée du Kou 5"></a>
+        </div>
+    </div>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-content">
+                <h2>Contact</h2>
+                <p>Email : <a href="patricekonate48@gmail.com">patricekonate48@gmail.com</a></p>
+                <p>Téléphone : +226 67 83 61 97</p>
+            </div>
+            <div class="footer-content">
+                <h2>Suivez-nous</h2>
+                <a href="#" class="social-icon">Facebook</a>
+                <a href="#" class="social-icon">Whatsapp</a>
+                <a href="#" class="social-icon">Instagram</a>
+            </div>
+        </div>
+        <p class="footer-bottom">&copy; 2024 Ville Touristique. Tous droits réservés.</p>
+    </footer>
+
+    <script>
+        // Script pour la lightbox
+        const lightboxLinks = document.querySelectorAll('[data-lightbox]');
+        const lightbox = document.createElement('div');
+        lightbox.id = 'lightbox';
+        lightbox.innerHTML = `
+            <button class="close">×</button>
+            <img src="" alt="Image Lightbox">
+        `;
+        document.body.appendChild(lightbox);
+
+        const lightboxImage = lightbox.querySelector('img');
+        const closeButton = lightbox.querySelector('.close');
+
+        lightboxLinks.forEach((lien) => {
+            lien.addEventListener('click', (e) => {
+                e.preventDefault();
+                lightboxImage.src = lien.href;
+                lightbox.style.display = 'flex';
+            });
+        });
+
+        closeButton.addEventListener('click', () => {
+            lightbox.style.display = 'none';
+        });
+
+        lightbox.addEventListener('click', (e) => {
+            if (e.target === lightbox) {
+                lightbox.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marché Central de Bobo-Dioulasso</title>
+    <link rel="stylesheet" href="site_style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Lato:wght@400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav>
+        <a href="index.html">ACCUEIL</a>
+        <a href="patrimoine.html">PATRIMOINE</a>
+        <a href="reserver.html">RÉSERVATION D'HÔTEL</a>
+        <a href="galerie.html">GALERIE</a>
+    </nav>
+    <div class="animated-images">
+        <div class="image-wrapper">
+            <h1>MARCHÉ CENTRAL DE BOBO-DIOULASSO</h1>
+            <img src="mc.jpeg" alt="Marché Central de Bobo-Dioulasso">
+        </div>
+    </div>
+    <div class="container">
+        <h1>Description du Marché Central de Bobo-Dioulasso</h1>
+        <p>Le Marché Central de Bobo-Dioulasso est un lieu de rencontre et de commerce situé au cœur de la ville de Bobo-Dioulasso, au Burkina Faso. C'est un endroit où les habitants et les visiteurs peuvent trouver une grande variété de produits locaux, tels que des fruits, des légumes, des épices, des tissus et des objets d'artisanat.</p>
+        <p>Le marché est un véritable reflet de la culture et de la tradition burkinabé, avec ses couleurs vives, ses odeurs et ses sons. Les vendeurs et les acheteurs se côtoient dans une atmosphère animée et conviviale, créant un véritable spectacle pour les visiteurs.</p>
+        <p>Le Marché Central de Bobo-Dioulasso est également un lieu de découverte, où les visiteurs peuvent trouver des produits uniques et authentiques, tels que des tissus traditionnels, des bijoux et des objets d'artisanat.</p>
+    </div>
+    <div class="container">
+        <h1>Histoire du Marché Central de Bobo-Dioulasso</h1>
+        <p>Le Marché Central de Bobo-Dioulasso a été créé dans les années 1950, à l'époque de la colonisation française. Il était alors un simple marché de quartier, où les habitants vendaient leurs produits locaux.</p>
+        <h2>Évolution et Développement</h2>
+        <p>Au fil des ans, le marché a évolué et s'est développé, devenant un véritable centre commercial et culturel de la ville. Les vendeurs ont commencé à proposer une plus grande variété de produits, et les acheteurs sont venus de plus en plus nombreux.</p>
+        <h2>Aujourd'hui</h2>
+        <p>Aujourd'hui, le Marché Central de Bobo-Dioulasso est un lieu incontournable de la ville, où les habitants et les visiteurs se côtoient dans une atmosphère animée et conviviale. Le marché est un véritable symbole de la culture et de la tradition burkinabé, et il continue de jouer un rôle important dans la vie économique et sociale de la ville.</p>
+    </div>
+    <div class="gallery">
+        <h1>Galerie du Marché Central de Bobo-Dioulasso</h1>
+        <div class="image-grid">
+            <a href="mc.jpeg" data-lightbox="image-1"><img src="mc.jpeg" alt="Marché Central de Bobo-Dioulasso 1"></a>
+            <a href="mc1.jpeg" data-lightbox="image-1"><img src="mc1.jpeg" alt="Marché Central de Bobo-Dioulasso 2"></a>
+            <a href="mc2.jpeg" data-lightbox="image-1"><img src="mc2.jpeg" alt="Marché Central de Bobo-Dioulasso 3"></a>
+            <a href="mc3.jpeg" data-lightbox="image-1"><img src="mc3.jpeg" alt="Marché Central de Bobo-Dioulasso 4"></a>
+            <a href="mc2.jpeg" data-lightbox="image-1"><img src="mc2.jpeg" alt="Marché Central de Bobo-Dioulasso 5"></a>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-content">
+                <h2>Contact</h2>
+                <p>Email : <a href="patricekonate48@gmail.com">patricekonate48@gmail.com</a></p>
+                <p>Téléphone : +226 67 83 61 97</p>
+            </div>
+            <div class="footer-content">
+                <h2>Suivez-nous</h2>
+                <a href="#" class="social-icon">Facebook</a>
+                <a href="#" class="social-icon">Whatsapp</a>
+                <a href="#" class="social-icon">Instagram</a>
+            </div>
+        </div>
+        <p class="footer-bottom">&copy; 2024 Ville Touristique. Tous droits réservés.</p>
+    </footer>
+
+    <script>
+        // JavaScript pour la lightbox
+        const lightboxLinks = document.querySelectorAll('[data-lightbox]');
+        const lightbox = document.createElement('div');
+        lightbox.id = 'lightbox';
+        lightbox.innerHTML = `
+            <button class="close">×</button>
+            <img src="" alt="Image Lightbox">
+        `;
+        document.body.appendChild(lightbox);
+
+        const lightboxImage = lightbox.querySelector('img');
+        const closeButton = lightbox.querySelector('.close');
+
+        lightboxLinks.forEach((lien) => {
+            lien.addEventListener('click', (e) => {
+                e.preventDefault();
+                lightboxImage.src = lien.href;
+                lightbox.style.display = 'flex';
+            });
+        });
+
+        closeButton.addEventListener('click', () => {
+            lightbox.style.display = 'none';
+        });
+
+        lightbox.addEventListener('click', (e) => {
+            if (e.target === lightbox) {
+                lightbox.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>

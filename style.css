@@ -1,0 +1,266 @@
+/* Réinitialisation de certains styles par défaut pour une apparence cohérente */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Style général du corps de la page */
+body {
+  font-family: 'Lato', sans-serif;
+  color: #333;
+  background-color: #f9f9f9;
+  line-height: 1.6;
+  overflow-x: hidden; /* Évite le défilement horizontal */
+  background-image: url(''); /* Chemin vers votre image */
+  background-size: cover; /* Pour que l'image couvre toute la page */
+  background-position: center; /* Pour centrer l'image */
+  background-repeat: no-repeat; /* Pour éviter la répétition de l'image */
+}
+
+/* Ajout de couleurs et d'animations */
+header {
+  background-image: linear-gradient(to bottom, #ff9a9e, #fecfef);
+  padding: 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+header h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 48px;
+  color: #333;
+  animation: fadeIn 2s;
+}
+
+header img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  animation: rotate 2s linear infinite;
+}
+
+nav {
+  background-color: #333;
+  padding: 10px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 20px;
+  transition: color 0.2s ease;
+}
+
+nav a:hover {
+  color: #ff9a9e;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+}
+
+@keyframes rotate {
+  from {
+      transform: rotate(0deg);
+  }
+  to {
+      transform: rotate(360deg);
+  }
+}
+
+/* Conteneur pour le contenu principal */
+.container {
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Style des titres */
+h1 {
+  color: hsla(240, 39%, 5%, 0.87);
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  animation: fadeInUp 1s ease-out;
+}
+
+h2 {
+  color: hsla(240, 92%, 41%, 0.764);
+  font-size: 2rem;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  animation: fadeInUp 1s ease-out;
+}
+
+/* Style des paragraphes */
+p {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 20px;
+  line-height: 1.8;
+}
+
+/* Animation des titres */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Footer */
+footer {
+  background-color: #ff9a9e; /* Couleur de fond du footer */
+  color: #fff; /* Couleur du texte */
+  padding: 20px 0;
+  text-align: center;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-around;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  border-bottom: 1px solid #f9f9f9;
+  flex-wrap: wrap; /* Permet au footer de s'adapter aux petits écrans */
+}
+
+.footer-content {
+  margin: 0 20px;
+  flex: 1 1 200px; /* Permet aux éléments du footer de se redimensionner */
+}
+
+.footer-content h2 {
+  margin-bottom: 10px;
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5rem;
+}
+
+.footer-content p {
+  margin: 5px 0;
+  font-family: 'Lato', sans-serif;
+}
+
+.footer-content a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer-content a:hover {
+  text-decoration: underline;
+}
+
+/* Social media icons styling */
+.social-icon {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 10px;
+  font-family: 'Lato', sans-serif;
+}
+
+.social-icon:hover {
+  text-decoration: underline;
+}
+
+/* Footer bottom text styling */
+.footer-bottom {
+  margin-top: 20px;
+  font-size: 0.9rem;
+  font-family: 'Lato', sans-serif;
+  border-top: 1px solid #f9f9f9;
+  padding-top: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  header img {
+    width: 120px;
+  }
+  
+  .container {
+    padding: 15px;
+  }
+  
+  nav a {
+    padding: 8px 15px;
+  }
+  
+  h1 {
+    font-size: 2rem;
+  }
+  
+  h2 {
+    font-size: 1.5rem;
+  }
+  
+  p {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  header img {
+    width: 100px;
+  }
+  
+  .container {
+    padding: 10px;
+  }
+  
+  nav a {
+    padding: 6px 10px;
+  }
+  
+  h1 {
+    font-size: 1.5rem;
+  }
+  
+  h2 {
+    font-size: 1.25rem;
+  }
+  
+  p {
+    font-size: 0.8rem;
+  }
+
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-content {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+}

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Réservation d'Hôtel à Bobo-Dioulasso</title>
+  <link rel="stylesheet" href="style4.css">
+  <script>
+    function afficherResume(event) {
+      event.preventDefault(); // Empêcher la soumission du formulaire
+
+      // Récupérer les valeurs des champs
+      const nom = document.getElementById('nom').value;
+      const prenom = document.getElementById('prenom').value;
+      const telephone = document.getElementById('telephone').value;
+      const adresse = document.getElementById('adresse').value;
+      const dateArrivee = document.getElementById("date_arrivee").value;
+      const dateSortie = document.getElementById("date_sortie").value;
+      const nombrePersonnes = document.getElementById('nombre_personnes').value;
+      const modePaiement = document.getElementById('mode_paiement').value;
+      const typeChambre = document.getElementById('type_chambre').value;
+
+      // Vérifier que les dates sont valides
+      if (!dateArrivee || !dateSortie) {
+        alert("Veuillez entrer des dates valides.");
+        return;
+      }
+
+      // Vérifier que la date d'arrivée n'est pas supérieure à la date de sortie
+      if (new Date(dateArrivee) > new Date(dateSortie)) {
+        alert("La date d'arrivée ne peut pas être supérieure à la date de sortie.");
+        return;
+      }
+
+      // Construire le résumé
+      const resume = `
+        <h2>Résumé de votre réservation</h2>
+        <p><strong>Nom :</strong> ${nom}</p>
+        <p><strong>Prénom :</strong> ${prenom}</p>
+        <p><strong>Numéro de téléphone :</strong> ${telephone}</p>
+        <p><strong>Adresse :</strong> ${adresse}</p>
+        <p><strong>Date d'arrivée :</strong> ${dateArrivee}</p>
+        <p><strong>Date de sortie :</strong> ${dateSortie}</p>
+        <p><strong>Nombre de personnes :</strong> ${nombrePersonnes}</p>
+        <p><strong>Type de chambre :</strong> ${typeChambre}</p>
+        <p><strong>Mode de paiement :</strong> ${modePaiement}</p>
+      `;
+
+      // Afficher le résumé
+      document.getElementById('resume').innerHTML = resume;
+    }
+  </script>
+</head>
+<body>
+  <nav>
+    <a href="index.html">ACCUEIL</a>
+    <a href="patrimoine.html">PATRIMOINE</a>
+    <a href="reserver.html">RÉSERVATION D'HÔTEL</a>
+    <a href="galerie.html">GALERIE</a>
+  </nav>
+  <main>
+    <div class="animated-images">
+      <img src="villa-bobo.jpg" alt="Hôtel 1">
+      <img src="Pa.jpg" alt="Hôtel 2">
+      <img src="Hôtel Sissiman.jpg" alt="Hôtel 3">
+    </div>
+    <div class="form-container">
+      <h2>Réservation d'Hôtel</h2>
+      <form onsubmit="afficherResume(event)">
+        <label for="nom">Nom :</label>
+        <input type="text" id="nom" name="nom" required>
+
+        <label for="prenom">Prénom :</label>
+        <input type="text" id="prenom" name="prenom" required>
+
+        <label for="telephone">Numéro de téléphone :</label>
+        <input type="tel" id="telephone" name="telephone" placeholder="+226" required>
+
+        <label for="adresse">Adresse :</label>
+        <input type="text" id="adresse" name="adresse" required>
+
+        <label for="type_chambre">Type de chambre :</label>
+        <select id="type_chambre" name="type_chambre" required>
+          <option value="Chambre double">Chambre double</option>
+          <option value="Chambre simple">Chambre simple</option>
+        </select>
+
+        <label for="date_arrivee">Date d'arrivée :</label>
+        <input type="date" id="date_arrivee" name="date_arrivee" required>
+
+        <label for="date_sortie">Date de sortie :</label>
+        <input type="date" id="date_sortie" name="date_sortie" required>
+
+        <label for="nombre_personnes">Nombre de personnes :</label>
+        <input type="number" id="nombre_personnes" name="nombre_personnes" min="1" required>
+
+        <label for="mode_paiement">Mode de paiement :</label>
+        <select id="mode_paiement" name="mode_paiement" required>
+          <option value="orange_money">Orange Money</option>
+          <option value="moov_money">Moov Money</option>
+          <option value="coris_money">Coris Money</option>
+          <option value="paiement_electronique">Paiement électronique</option>
+        </select>
+
+        <button class="Btn" type="submit">
+          Réserver
+          <svg class="svgIcon" viewBox="0 0 576 512"><path d="M512 80c8.8 0 16 7.2 16 16v32H48V96c0-8.8 7.2-16 16-16H512zm16 144V416c0 8.8-7.2 16-16 16H64c-8.8 0-16-7.2-16-16V224H528zM64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H512c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64zm56 304c-13.3 0-24 10.7-24 24s10.7 24 24 24h48c13.3 0 24-10.7 24-24s-10.7-24-24-24H120zm128 0c-13.3 0-24 10.7-24 24s10.7 24 24 24H360c13.3 0 24-10.7 24-24s-10.7-24-24-24H248z"></path></svg>
+        </button>
+      </form>
+    </div>
+    <div id="resume"></div>
+  </main>
+  <footer>
+    <div class="footer-container">
+        <div class="footer-content">
+            <h2>Contact</h2>
+            <p>Email : <a href="mailto:patricekonate48@gmail.com">patricekonate48@gmail.com</a></p>
+            <p>Téléphone : +226 67 83 61 97</p>
+        </div>
+        <div class="footer-content">
+            <h2>Suivez-nous</h2>
+            <a href="#" class="social-icon">Facebook</a>
+            <a href="#" class="social-icon">WhatsApp</a>
+            <a href="#" class="social-icon">Instagram</a>
+        </div>
+    </div>
+    <p class="footer-bottom">&copy; 2024 Ville Touristique. Tous droits réservés.</p>
+  </footer>
+</body>
+</html>

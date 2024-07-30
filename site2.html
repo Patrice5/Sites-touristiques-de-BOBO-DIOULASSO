@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Musée Sogossira Sanon</title>
+    <link rel="stylesheet" href="site_style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Lato:wght@400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav>
+        <a href="index.html">ACCUEIL</a>
+        <a href="patrimoine.html">PATRIMOINE</a>
+        <a href="reserver.html">RÉSERVATION D'HÔTEL</a>
+        <a href="galerie.html">GALERIE</a>
+    </nav>
+    <div class="animated-images">
+        <div class="image-wrapper">
+            <h1>MUSÉE SOGOSSIRA SANON</h1>
+            <img src="mu2.jpeg" alt="Musée Sogossira Sanon">
+        </div>
+    </div>
+
+    <div class="container">
+        <h1>Description du Musée Sogossira Sanon</h1>
+        <p>Le Musée Sogossira Sanon est un centre culturel important situé à Bobo-Dioulasso. Ce musée est dédié à la préservation et à la présentation des traditions et de l'histoire du Burkina Faso. Inauguré en 1990, il a été fondé pour mettre en valeur les artefacts culturels et historiques de la région. Le musée est connu pour ses expositions enrichissantes qui montrent la diversité des cultures et des traditions locales.</p>
+        <p>Le bâtiment du musée allie architecture traditionnelle et moderne, offrant un espace agréable et fonctionnel pour les visiteurs. Il est construit avec des matériaux locaux et présente un design qui reflète les valeurs culturelles du Burkina Faso, tout en intégrant des installations modernes pour améliorer l'expérience des visiteurs.</p>
+        <p>Le musée présente une large gamme d'expositions, allant des sculptures et des textiles aux instruments de musique et objets d'artisanat. Les visiteurs peuvent explorer ces collections à travers des présentations interactives et des panneaux explicatifs, permettant une immersion complète dans le patrimoine culturel du Burkina Faso.</p>
+    </div>
+    
+    <div class="container">
+        <h1>Histoire du Musée Sogossira Sanon</h1>
+        <p>Le Musée Sogossira Sanon a été créé pour promouvoir et préserver le patrimoine culturel du Burkina Faso. Sa fondation s'inscrit dans un effort plus large pour sauvegarder les traditions locales face aux influences extérieures et aux changements rapides.</p>
+        <h2>Origines et Contexte Historique</h2>
+        <p>Avant sa création, la région de Bobo-Dioulasso était un important centre culturel et commercial. Le musée a été établi pour servir de dépôt et de centre d'exposition pour les objets culturels de la région, reflétant ainsi la richesse et la diversité des traditions locales.</p>
+        <h2>Fondation du Musée</h2>
+        <p>Inauguré en 1990, le Musée Sogossira Sanon a été le résultat des efforts des autorités locales et nationales pour mettre en place un centre culturel majeur. Le musée a été conçu pour offrir une plateforme pour la préservation et la présentation de l'héritage culturel du Burkina Faso.</p>
+        <h2>Développement et Réformes</h2>
+        <p>Depuis sa création, le musée a connu plusieurs phases de développement. Des améliorations ont été apportées aux installations et aux expositions pour offrir une meilleure expérience aux visiteurs. Le musée a également intégré des technologies modernes et élargi ses programmes éducatifs pour engager le public.</p>
+        <h2>Aujourd'hui</h2>
+        <p>Le Musée Sogossira Sanon continue de jouer un rôle crucial dans la préservation et la promotion du patrimoine culturel burkinabé. Il est un lieu de rencontre et de découverte pour les visiteurs nationaux et internationaux, offrant des expositions variées et des programmes éducatifs pour tous les âges.</p>
+    </div>
+    <div class="gallery">
+        <h1>Galerie du Musée Sogossira Sanon</h1>
+        <div class="image-grid">
+            <a href="mu1.jpeg" data-lightbox="image-1"><img src="mu1.jpeg" alt="Musée Sogossira Sanon 1"></a>
+            <a href="mu2.jpeg" data-lightbox="image-1"><img src="mu2.jpeg" alt="Musée Sogossira Sanon 2"></a>
+            <a href="mu3.jpeg" data-lightbox="image-1"><img src="mu3.jpeg" alt="Musée Sogossira Sanon 3"></a>
+            <a href="mu4.jpeg" data-lightbox="image-1"><img src="mu4.jpeg" alt="Musée Sogossira Sanon 4"></a>
+            <a href="mu6.jpeg" data-lightbox="image-1"><img src="mu6.jpeg" alt="Musée Sogossira Sanon 5"></a>
+        </div>
+    </div>
+    <div id="lightbox">
+        <button class="close">×</button>
+        <img src="" alt="Image Lightbox">
+    </div>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-content">
+                <h2>Contact</h2>
+                <p>Email : <a href="patricekonate48@gmail.com">patricekonate48@gmail.com</a></p>
+                <p>Téléphone : +226 67 83 61 97</p>
+            </div>
+            <div class="footer-content">
+                <h2>Suivez-nous</h2>
+                <a href="#" class="social-icon">Facebook</a>
+                <a href="#" class="social-icon">Whatsapp</a>
+                <a href="#" class="social-icon">Instagram</a>
+            </div>
+        </div>
+        <p class="footer-bottom">&copy; 2024 Ville Touristique. Tous droits réservés.</p>
+    </footer>
+    <script>
+        // JavaScript pour la lightbox
+        const lightboxLinks = document.querySelectorAll('[data-lightbox]');
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImage = lightbox.querySelector('img');
+        const closeButton = lightbox.querySelector('.close');
+        
+        lightboxLinks.forEach((lien) => {
+            lien.addEventListener('click', (e) => {
+                e.preventDefault();
+                lightboxImage.src = lien.href;
+                lightbox.style.display = 'flex';
+            });
+        });
+        
+        closeButton.addEventListener('click', () => {
+            lightbox.style.display = 'none';
+        });
+    </script>
+</body>
+</html>

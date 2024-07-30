@@ -1,0 +1,246 @@
+/* Réinitialisation de certains styles par défaut pour une apparence cohérente */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Style général du corps de la page */
+body {
+  font-family: 'Arial', sans-serif;
+  color: #333;
+  background-color: #f0f0f0;
+  line-height: 1.6;
+  overflow-x: hidden; /* Évite le défilement horizontal */
+}
+
+/* Style de la navigation */
+nav {
+  background-color: #ff9a9e;
+  padding: 15px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s;
+}
+
+nav:hover {
+  background-color:black;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 10px 20px;
+  transition: color 0.3s, transform 0.3s;
+}
+
+nav a:hover {
+  color: #ff9a9e;
+  transform: scale(1.1);
+}
+
+/* Style principal */
+main {
+  padding: 20px;
+  animation: fadeIn 1s ease-out;
+}
+
+/* Style des sections */
+section {
+  margin-bottom: 40px;
+}
+
+h1, h2 {
+  color: hsla(240, 92%, 41%, 0.764);
+  margin-bottom: 10px;
+  animation: fadeInUp 1s ease-out;
+}
+
+h1 {
+  font-size: 2.8rem;
+}
+
+h2 {
+  font-size: 2.2rem;
+}
+
+/* Style des éléments des sites touristiques */
+.sites {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+}
+
+.site {
+    background: #eeebeb;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    width: calc(25% - 20px); /* Réduit la largeur des éléments */
+    transition: transform 0.3s, box-shadow 0.3s;
+    position: relative;
+    transform: perspective(1000px);
+    display: block;
+    text-decoration: none;
+    color: inherit;
+}
+
+.site::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.2);
+  transition: opacity 0.3s;
+  opacity: 0;
+  z-index: 1;
+}
+
+.site:hover::before {
+  opacity: 0;
+}
+
+.site img {
+    background: rgba(242, 239, 239, 0.888);
+  width: 100%;
+  display: block;
+  transition: transform 0.3s, filter 0.3s;
+}
+
+.site:hover img {
+  transform: scale(1.1);
+  filter: brightness(0.8);
+}
+
+.site:hover {
+  transform: rotateY(10deg);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+}
+
+.site h3 {
+  font-size: 1.6rem;
+  color:red;
+  padding: 15px;
+  background: #f9f9f9;
+  margin: 0;
+  position: relative;
+  z-index: 2;
+}
+
+.site p {
+  padding: 15px;
+  font-size: 1.1rem;
+  color: #666;
+  background: #f9f9f9;
+  margin: 0;
+  margin: 10px 0 0;
+}
+
+
+.site div {
+  display: block;
+}
+
+.site figcaption h3 {
+  margin: 0;
+}
+
+/* Animation des titres */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .site {
+    width: calc(50% - 30px);
+  }
+}
+
+@media (max-width: 480px) {
+  .site {
+    width: calc(100% - 30px);
+  }
+}
+/* Footer */
+footer {
+  background-color: #ff9a9e;/* Couleur de fond du footer */
+  color: #fff; /* Couleur du texte */
+  padding: 20px 0;
+  text-align: center;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-around;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  border-bottom: 1px solid #f9f9f9;
+}
+
+.footer-content {
+  margin: 0 20px;
+}
+
+.footer-content h2 {
+  margin-bottom: 10px;
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5rem;
+}
+
+.footer-content p {
+  margin: 5px 0;
+  font-family: 'Lato', sans-serif;
+}
+
+.footer-content a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer-content a:hover {
+  text-decoration: underline;
+}
+/* Social media icons styling */
+.social-icon {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 10px;
+  font-family: 'Lato', sans-serif;
+}
+
+.social-icon:hover {
+  text-decoration: underline;
+}
+
+/* Footer bottom text styling */
+.footer-bottom {
+  margin-top: 20px;
+  font-size: 0.9rem;
+  font-family: 'Lato', sans-serif;
+  border-top: 1px solid #f9f9f9;
+  padding-top: 10px;
+}

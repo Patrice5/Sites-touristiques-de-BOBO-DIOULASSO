@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mare aux Poissons Sacrés de Dafra</title>
+    <link rel="stylesheet" href="site_style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Lato:wght@400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav>
+        <a href="index.html">ACCUEIL</a>
+        <a href="patrimoine.html">PATRIMOINE</a>
+        <a href="reserver.html">RÉSERVATION D'HÔTEL</a>
+        <a href="galerie.html">GALERIE</a>
+    </nav>
+    <div class="animated-images">
+        <div class="image-wrapper">
+            <h1>Mare aux Silures Sacrés de Dafra</h1>
+            <img src="da7.jpeg" alt="Mare aux Silures Sacrés de Dafra">
+        </div>
+    </div>
+    <div class="container">
+        <h1>Description de la Mare aux Silures Sacrés de Dafra</h1>
+        <p>La Mare aux Silures Sacrés de Dafra est un site mystique et culturellement significatif situé à Bobo-Dioulasso, au Burkina Faso. Cette mare est entourée de légendes et de croyances locales, faisant d'elle un lieu de pèlerinage important pour de nombreux habitants. Les poissons de la mare sont considérés comme sacrés et sont protégés par des tabous stricts qui interdisent de les pêcher ou de les toucher. Les visiteurs viennent souvent pour offrir des sacrifices et demander des bénédictions, perpétuant ainsi les traditions ancestrales de la région.</p>
+    </div>
+    <div class="container">
+        <h1>Histoire de la Mare aux Silures Sacrés de Dafra</h1>
+        <p>La Mare aux Silures Sacrés de Dafra est profondément enracinée dans l'histoire et la culture de Bobo-Dioulasso. Voici un aperçu détaillé de son histoire :</p>
+        <h2>Origines et Contexte Historique</h2>
+        <p>La mare a toujours été un lieu sacré pour les populations locales, bien avant l'arrivée des colons français. Elle est entourée de récits mythologiques qui expliquent l'origine sacrée des poissons qui y vivent. Ces récits sont transmis de génération en génération, renforçant l'importance culturelle et spirituelle de la mare.</p>
+        <h2>Signification Culturelle</h2>
+        <p>Les poissons de Dafra sont vénérés par les communautés locales, qui voient en eux des protecteurs et des porteurs de bonnes fortunes. Les rituels et sacrifices effectués à la mare sont censés apporter la paix, la prospérité et la guérison. Cette pratique est un élément clé de la culture et de la spiritualité de la région.</p>
+        <h2>Pratiques et Rituels</h2>
+        <p>Les visiteurs de la Mare aux Silures Sacrés de Dafra participent à divers rituels, y compris des offrandes de nourriture et de boissons aux poissons. Ces pratiques sont strictement respectées pour honorer les esprits de la mare et pour maintenir l'équilibre spirituel de la communauté.</p>
+        <h2>Aujourd'hui</h2>
+        <p>Aujourd'hui, la Mare aux Silures Sacrés de Dafra continue d'attirer des visiteurs de partout au Burkina Faso et au-delà. Elle reste un lieu de culte et de tradition, où les gens viennent chercher des bénédictions et perpétuer les coutumes anciennes. La mare est également un symbole de la richesse culturelle et spirituelle de Bobo-Dioulasso.</p>
+        <p>La Mare aux Silures Sacrés de Dafra est un témoignage vivant des traditions et croyances ancestrales, offrant un aperçu fascinant de l'histoire et de la culture de la région.</p>
+    </div>
+    <div class="gallery">
+        <h1>Galerie de la Mare aux Poissons Sacrés de Dafra</h1>
+        <div class="image-grid">
+            <a href="da2.jpeg" data-lightbox="image-1"><img src="da2.jpeg" alt="Mare aux Poissons Sacrés de Dafra 1"></a>
+            <a href="da3.jpeg" data-lightbox="image-1"><img src="da3.jpeg" alt="Mare aux Poissons Sacrés de Dafra 2"></a>
+            <a href="da5.jpeg" data-lightbox="image-1"><img src="da5.jpeg" alt="Mare aux Poissons Sacrés de Dafra 3"></a>
+            <a href="da.jpeg" data-lightbox="image-1"><img src="da.jpeg" alt="Mare aux Poissons Sacrés de Dafra 4"></a>
+            <a href="da7.jpeg" data-lightbox="image-1"><img src="da7.jpeg" alt="Mare aux Poissons Sacrés de Dafra 5"></a>
+            <a href="da1.jpeg" data-lightbox="image-1"><img src="da1.jpeg" alt="Mare aux Poissons Sacrés de Dafra 6"></a>
+            <a href="da6.jpeg" data-lightbox="image-1"><img src="da6.jpeg" alt="Mare aux Poissons Sacrés de Dafra 7"></a>
+        </div>
+    </div>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-content">
+                <h2>Contact</h2>
+                <p>Email : <a href="patricekonate48@gmail.com">patricekonate48@gmail.com</a></p>
+                <p>Téléphone : +226 67 83 61 97</p>
+            </div>
+            <div class="footer-content">
+                <h2>Suivez-nous</h2>
+                <a href="#" class="social-icon">Facebook</a>
+                <a href="#" class="social-icon">Whatsapp</a>
+                <a href="#" class="social-icon">Instagram</a>
+            </div>
+        </div>
+        <p class="footer-bottom">&copy; 2024 Ville Touristique. Tous droits réservés.</p>
+    </footer>
+
+    <script>
+        // JavaScript pour la lightbox
+        const lightboxLinks = document.querySelectorAll('[data-lightbox]');
+        const lightbox = document.createElement('div');
+        lightbox.id = 'lightbox';
+        lightbox.innerHTML = `
+            <button class="close">×</button>
+            <img src="" alt="Image Lightbox">
+        `;
+        document.body.appendChild(lightbox);
+
+        const lightboxImage = lightbox.querySelector('img');
+        const closeButton = lightbox.querySelector('.close');
+
+        lightboxLinks.forEach((lien) => {
+            lien.addEventListener('click', (e) => {
+                e.preventDefault();
+                lightboxImage.src = lien.href;
+                lightbox.style.display = 'flex';
+            });
+        });
+
+        closeButton.addEventListener('click', () => {
+            lightbox.style.display = 'none';
+        });
+
+        lightbox.addEventListener('click', (e) => {
+            if (e.target === lightbox) {
+                lightbox.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>

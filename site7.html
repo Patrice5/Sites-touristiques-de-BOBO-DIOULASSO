@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monument du Cinquantenaire de Bobo-Dioulasso</title>
+    <link rel="stylesheet" href="site_style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Lato:wght@400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav>
+        <a href="index.html">ACCUEIL</a>
+        <a href="patrimoine.html">PATRIMOINE</a>
+        <a href="reserver.html">RÉSERVATION D'HÔTEL</a>
+        <a href="galerie.html">GALERIE</a>
+    </nav>
+    <div class="animated-images">
+        <div class="image-wrapper">
+            <h1>Monument du Cinquantenaire de Bobo-Dioulasso</h1>
+            <img src="mo1.jpeg" alt="Monument du Cinquantenaire de Bobo-Dioulasso">
+        </div>
+    </div>
+    <div class="container">
+        <h1>Description du Monument du Cinquantenaire de Bobo-Dioulasso</h1>
+        <p>Le Monument du Cinquantenaire de Bobo-Dioulasso est un symbole emblématique de la ville, célébrant le cinquantième anniversaire de l'indépendance du Burkina Faso. Situé dans le cœur de la ville, ce monument majestueux est un témoignage de l'histoire récente et de la résilience du pays. Il attire de nombreux visiteurs et résidents, qui viennent admirer son architecture imposante et réfléchir sur le parcours historique du Burkina Faso.</p>
+    </div>
+    <div class="container">
+        <h1>Histoire du Monument du Cinquantenaire</h1>
+        <p>Érigé en 2010, le Monument du Cinquantenaire de Bobo-Dioulasso marque un jalon important dans l'histoire du Burkina Faso. Voici un aperçu détaillé de son histoire :</p>
+        <h2>Contexte de la Construction</h2>
+        <p>Le monument a été construit pour célébrer les 50 ans de l'indépendance du Burkina Faso, obtenue en 1960. Il représente la liberté, la paix et le progrès de la nation burkinabè au cours des cinq dernières décennies.</p>
+        <h2>Inauguration</h2>
+        <p>La cérémonie d'inauguration du monument a eu lieu le 5 août 2010, date anniversaire de l'indépendance. Elle a été marquée par des festivités et des discours de dignitaires locaux et nationaux, soulignant l'importance de ce jalon historique.</p>
+        <h2>Signification Symbolique</h2>
+        <p>Le Monument du Cinquantenaire est plus qu'une structure architecturale; il est un symbole de l'unité et de la résilience du peuple burkinabè. Il rappelle les luttes et les accomplissements du pays depuis son indépendance.</p>
+        <h2>Aujourd'hui</h2>
+        <p>Aujourd'hui, le Monument du Cinquantenaire est un lieu de mémoire et de réflexion, ainsi qu'une attraction touristique majeure à Bobo-Dioulasso. Il continue de servir de rappel visuel de l'histoire récente et des aspirations futures du Burkina Faso.</p>
+    </div>
+    <div class="gallery">
+        <h1>Galerie du Monument du Cinquantenaire</h1>
+        <div class="image-grid">
+            <a href="mo.jpeg" data-lightbox="image-1"><img src="mo.jpeg" alt="Monument du Cinquantenaire de Bobo-Dioulasso 1"></a>
+            <a href="mo1.jpeg" data-lightbox="image-2"><img src="mo1.jpeg" alt="Monument du Cinquantenaire de Bobo-Dioulasso 2"></a>
+            <a href="mo3.jpeg" data-lightbox="image-3"><img src="mo3.jpeg" alt="Monument du Cinquantenaire de Bobo-Dioulasso 3"></a>
+            <a href="mo4.jpeg" data-lightbox="image-4"><img src="mo4.jpeg" alt="Monument du Cinquantenaire de Bobo-Dioulasso 4"></a>
+            <a href="mo5.jpeg" data-lightbox="image-5"><img src="mo5.jpeg" alt="Monument du Cinquantenaire de Bobo-Dioulasso 5"></a>
+        </div>
+    </div>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-content">
+                <h2>Contact</h2>
+                <p>Email : <a href="patricekonate48@gmail.com">patricekonate48@gmail.com</a></p>
+                <p>Téléphone : +226 67 83 61 97</p>
+            </div>
+            <div class="footer-content">
+                <h2>Suivez-nous</h2>
+                <a href="#" class="social-icon">Facebook</a>
+                <a href="#" class="social-icon">Whatsapp</a>
+                <a href="#" class="social-icon">Instagram</a>
+            </div>
+        </div>
+        <p class="footer-bottom">&copy; 2024 Ville Touristique. Tous droits réservés.</p>
+    </footer>
+
+    <script>
+        // Script pour la lightbox
+        const lightboxLinks = document.querySelectorAll('[data-lightbox]');
+        const lightbox = document.createElement('div');
+        lightbox.id = 'lightbox';
+        lightbox.innerHTML = `
+            <button class="close">×</button>
+            <img src="" alt="Image Lightbox">
+        `;
+        document.body.appendChild(lightbox);
+
+        const lightboxImage = lightbox.querySelector('img');
+        const closeButton = lightbox.querySelector('.close');
+
+        lightboxLinks.forEach((lien) => {
+            lien.addEventListener('click', (e) => {
+                e.preventDefault();
+                lightboxImage.src = lien.href;
+                lightbox.style.display = 'flex';
+            });
+        });
+
+        closeButton.addEventListener('click', () => {
+            lightbox.style.display = 'none';
+        });
+
+        lightbox.addEventListener('click', (e) => {
+            if (e.target === lightbox) {
+                lightbox.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>
